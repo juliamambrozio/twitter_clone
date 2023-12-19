@@ -10,6 +10,8 @@ abstract class Action {
 		$this->view = new \stdClass();
 	}
 
+	//renderizando página
+
 	protected function render($view, $layout = 'layout') {
 		$this->view->page = $view;
 

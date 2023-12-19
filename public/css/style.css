@@ -1,0 +1,69 @@
+html, body {
+  height: 100%;
+}
+
+body {
+	font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1 {
+	display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+h2 {
+	display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.banner {
+	height: 100%;
+	background-color: #1da1f2;
+}
+
+.title {
+	color: #1da1f2;
+	font-size: 27px;
+    line-height: 32px;
+}
+
+.subtitle {
+	color: #14171a;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 16px auto;
+}
+
+.form-control {
+	background-color: #fff;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+}
+
+.comunicacao {
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.communicationItem {
+	color: #fff;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    margin: 48px auto;
+    position: relative;
+}

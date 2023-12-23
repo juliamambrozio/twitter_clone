@@ -1,5 +1,5 @@
 <div class="container-fluid h-100">
-	<div class="row h-100">
+<div class="row h-100">
     
     <div class="col-md-6 banner">
     	<div class="row h-100 justify-content-center align-items-center">
@@ -21,18 +21,26 @@
     </div>
 
     <div class="col-md-6 pt-4 pl-5 pr-5">
-		<form>
+		<form method="post" action="/autenticar">
 			<div class="row">
 				<div class="col">
-					<input type="text" class="form-control" placeholder="E-mail">
+					<input type="text" name="email" class="form-control" placeholder="E-mail">
 				</div>
 				<div class="col">
-					<input type="text" class="form-control" placeholder="Senha">
+					<input type="password" name="senha" class="form-control" placeholder="Senha">
 				</div>
 				<div class="col-auto">
 					<button type="submit" class="btn btn-primary mb-2">Entrar</button>
 				</div>
 			</div>
+
+			<?php if($this->view->login == 'erro') { ?>
+				<div class="row">
+					<div class="col">
+						<span class="text text-danger">*E-mail e ou senha inválido(s)</span>
+					</div>
+				</div>
+			<?php } ?>
 		</form>
 
 		<div class="row pt-5 pl-5 pr-5">

@@ -10,6 +10,8 @@ class IndexController extends Action {
 
 	public function index() {
 
+		$this->view->login = isset($_GET['login']) ? $_GET['login'] : ''; //se "login estiver na URL, vamos receber o valor dele, se não, vai ser vázio"
+
 		$this->render('index');
 	}
 
@@ -32,7 +34,7 @@ class IndexController extends Action {
 
 		$usuario->__set('nome', $_POST['nome']);
 		$usuario->__set('email', $_POST['email']);
-		$usuario->__set('senha', $_POST['senha']);
+		$usuario->__set('senha', md5($_POST['senha'])); //criptografando senha
 
 		
 		if($usuario->validarCadastro() && count($usuario->getUsuarioPorEmail()) == 0) { //se a quantidade de e-mails iguals for superior a 0, então existe registros com o mesmo e-mail (o que não pode acontecer)
